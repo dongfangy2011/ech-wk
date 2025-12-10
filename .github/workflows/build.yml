@@ -172,7 +172,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         run: |
           echo "Downloading latest China IP list..."
-          curl -L -o chn_ip.txt "https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chn_ip.txt" || echo "Failed to download, will skip"
+          curl -L -o chn_ip.txt "https://raw.githubusercontent.com/mayaxcn/china-ip-list/refs/heads/master/chn_ip.txt" || echo "Failed to download, will skip"
           if [ -f "chn_ip.txt" ]; then
             echo "✓ China IP list downloaded successfully"
             wc -l chn_ip.txt
